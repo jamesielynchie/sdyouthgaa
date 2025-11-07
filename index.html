@@ -13,7 +13,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>San Diego Youth GAA</h2>
+                <a href="#home">
+                    <img src="images/Youth-GAA-Logo-01.png" alt="San Diego Youth GAA Logo" class="logo-img">
+                </a>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
@@ -186,33 +188,45 @@
                 <div class="sponsorship-text">
                     <h3>Become a Sponsor</h3>
                     <p>Help us grow Gaelic sports in San Diego! Your sponsorship helps us provide equipment, maintain facilities, and keep our programs accessible to all families.</p>
-                    <div class="sponsorship-benefits">
-                        <h4>Sponsor Benefits:</h4>
-                        <ul>
-                            <li>Logo placement on our website and materials</li>
-                            <li>Recognition at training sessions and events</li>
-                            <li>Tax-deductible donation (501(c)(3) pending)</li>
-                            <li>Supporting youth development in San Diego</li>
-                        </ul>
-                    </div>
+                    <p><strong>SDYGAA is a 501(c)(3) organization.</strong> All donations are tax-deductible.</p>
                 </div>
                 <div class="sponsorship-levels">
-                    <h3>Sponsorship Levels</h3>
+                    <h3>Sponsorship Tiers</h3>
                     <div class="levels-grid">
                         <div class="level">
-                            <h4>Community Supporter</h4>
-                            <p class="amount">$100 - $499</p>
-                            <p>Website recognition</p>
+                            <h4>Green Tier</h4>
+                            <p class="amount">$150</p>
+                            <ul>
+                                <li>Sponsor a child's club dues and equipment for a year of training</li>
+                            </ul>
                         </div>
                         <div class="level">
-                            <h4>Team Sponsor</h4>
-                            <p class="amount">$500 - $999</p>
-                            <p>Website + session recognition</p>
+                            <h4>Bronze Tier</h4>
+                            <p class="amount">$500</p>
+                            <ul>
+                                <li>Certificate to display at business in recognition of support</li>
+                                <li>Social Media Shout Outs</li>
+                                <li>Recognition on SDYGAA Website and signage on pop-up tent at practice</li>
+                            </ul>
                         </div>
                         <div class="level">
-                            <h4>Club Partner</h4>
-                            <p class="amount">$1,000+</p>
-                            <p>Full recognition package</p>
+                            <h4>Silver Tier</h4>
+                            <p class="amount">$2,000</p>
+                            <ul>
+                                <li>Includes all Bronze Benefits</li>
+                                <li>Featured social media post at the start of Fall, Winter, and Spring practice</li>
+                                <li>Small/medium logo placement on jersey and one adult-sized jersey</li>
+                                <li>Feature on Clubs' Social Media and Website</li>
+                            </ul>
+                        </div>
+                        <div class="level">
+                            <h4>Gold Tier</h4>
+                            <p class="amount">$3,000</p>
+                            <ul>
+                                <li>Includes all Silver benefits</li>
+                                <li>A large logo on jerseys (Front)</li>
+                                <li>Players and Coaches will wear these shirts to practice, school, etc.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -228,12 +242,16 @@
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-item">
+                        <h4>Contact</h4>
+                        <p>Caroline Conlon, Chairperson</p>
+                    </div>
+                    <div class="contact-item">
                         <h4>Email</h4>
-                        <p>info@sdyouthgaa.org</p>
+                        <p>SDYouthGAA1@gmail.com</p>
                     </div>
                     <div class="contact-item">
                         <h4>Phone</h4>
-                        <p>(619) 555-0123</p>
+                        <p>(858) 349-4170</p>
                     </div>
                     <div class="contact-item">
                         <h4>Location</h4>
@@ -247,7 +265,9 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form>
+                    <form action="https://formspree.io/f/xldoqvle" method="POST" id="contact-form">
+                        <input type="hidden" name="_replyto" value="SDYouthGAA1@gmail.com">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from SD Youth GAA Website">
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -274,6 +294,7 @@
                             <textarea id="message" name="message" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div id="form-status" style="margin-top: 1rem; display: none;"></div>
                     </form>
                 </div>
             </div>
@@ -299,8 +320,8 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>info@sdyouthgaa.org</p>
-                    <p>(619) 555-0123</p>
+                    <p>SDYouthGAA1@gmail.com</p>
+                    <p>(858) 349-4170</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -312,3 +333,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
