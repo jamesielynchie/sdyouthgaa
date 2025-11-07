@@ -23,11 +23,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
+    opacity: 1;
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 10px 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    height: 120px;
 }
 
 .nav-container {
@@ -37,12 +38,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
-.nav-logo h2 {
-    color: #2c5530;
-    font-weight: 700;
-    font-size: 1.5rem;
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 100px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -77,13 +91,19 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+                url('images/Youth-GAA-Header-Image-02.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
     text-align: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .hero-content {
@@ -96,26 +116,29 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 400;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero-tagline {
     font-size: 1.2rem;
     font-style: italic;
     margin-bottom: 0.5rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), 0 0 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-tagline-translation {
     font-size: 1rem;
     margin-bottom: 2rem;
-    opacity: 0.8;
+    opacity: 0.9;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), 0 0 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-buttons {
@@ -219,6 +242,23 @@ section {
 }
 
 /* Sports Section */
+.sports {
+    position: relative;
+    background: url('images/Youth-GAA-Header-Image-04.png') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.sports .section-title {
+    color: #ffffff;
+}
+
+.sports .container {
+    position: relative;
+    z-index: 1;
+}
+
 .sports-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -231,6 +271,24 @@ section {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-top: 5px solid #2c5530;
+    position: relative;
+    overflow: hidden;
+}
+
+.sport-card:first-child {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%),
+                url('images/Youth-GAA-Header-Image-01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sport-card:last-child {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%),
+                url('images/Youth-GAA-Header-Image-03.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .sport-card h3 {
@@ -238,16 +296,22 @@ section {
     color: #2c5530;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    position: relative;
+    z-index: 1;
 }
 
 .sport-card p {
     margin-bottom: 1.5rem;
     color: #555;
     line-height: 1.7;
+    position: relative;
+    z-index: 1;
 }
 
 .sport-card ul {
     list-style: none;
+    position: relative;
+    z-index: 1;
 }
 
 .sport-card li {
@@ -255,6 +319,7 @@ section {
     color: #666;
     position: relative;
     padding-left: 1.5rem;
+    z-index: 1;
 }
 
 .sport-card li:before {
@@ -319,6 +384,19 @@ section {
 }
 
 /* Sessions Section */
+.sessions {
+    position: relative;
+    background: url('images/Youth-GAA-Header-Image-05.png') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.sessions .container {
+    position: relative;
+    z-index: 1;
+}
+
 .sessions-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -409,8 +487,12 @@ section {
 
 .sponsorship-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.sponsorship-levels {
+    width: 100%;
 }
 
 .sponsorship-text h3 {
@@ -453,16 +535,20 @@ section {
 
 .levels-grid {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .level {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem 3rem;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-top: 4px solid #2c5530;
+    min-height: 100%;
 }
 
 .level h4 {
@@ -475,7 +561,30 @@ section {
     font-size: 1.5rem;
     font-weight: 700;
     color: #ff6b35;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.level ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.level li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.level li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2c5530;
+    font-weight: bold;
 }
 
 /* Contact Section */
@@ -595,10 +704,20 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+        height: 90px;
+    }
+
+    .logo-img {
+        height: 70px;
+        max-width: 200px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 90px;
         flex-direction: column;
         background-color: white;
         width: 100%;
@@ -628,6 +747,11 @@ section {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hero {
+        background-attachment: scroll;
+        padding: 110px 0 60px;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -650,7 +774,19 @@ section {
         gap: 2rem;
     }
 
+    .sports {
+        background-attachment: scroll;
+    }
+
+    .sessions {
+        background-attachment: scroll;
+    }
+
     .sports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .levels-grid {
         grid-template-columns: 1fr;
     }
 
@@ -691,3 +827,7 @@ section {
         padding: 2rem;
     }
 }
+
+
+
+
