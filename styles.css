@@ -160,16 +160,16 @@ body {
 }
 
 .btn-primary {
-    background: #ff6b35;
+    background: #a61323;
     color: white;
-    border-color: #ff6b35;
+    border-color: #a61323;
 }
 
 .btn-primary:hover {
-    background: #e55a2b;
-    border-color: #e55a2b;
+    background: #8a0f1c;
+    border-color: #8a0f1c;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 5px 15px rgba(166, 19, 35, 0.4);
 }
 
 .btn-secondary {
@@ -412,7 +412,7 @@ section {
 }
 
 .session-card.featured {
-    border-color: #ff6b35;
+    border-color: #a61323;
     position: relative;
 }
 
@@ -421,7 +421,7 @@ section {
     position: absolute;
     top: -15px;
     left: 30px;
-    background: #ff6b35;
+    background: #a61323;
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -560,7 +560,7 @@ section {
 .amount {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ff6b35;
+    color: #a61323;
     margin-bottom: 1rem;
 }
 
@@ -594,14 +594,27 @@ section {
     gap: 4rem;
 }
 
-.contact-info h3 {
-    font-size: 1.8rem;
-    color: #2c5530;
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-logo {
     margin-bottom: 2rem;
-    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-logo-img {
+    max-width: 200px;
+    height: auto;
+    width: 100%;
 }
 
 .contact-item {
+    width: 100%;
+    text-align: left;
     margin-bottom: 2rem;
 }
 
@@ -772,6 +785,10 @@ section {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .contact-logo-img {
+        max-width: 150px;
     }
 
     .sports {
