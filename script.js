@@ -30,10 +30,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
-const contactForm = document.querySelector('.contact-form form');
+// Form submission handling with Formspree
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Get form data
@@ -44,31 +46,84 @@ if (contactForm) {
         
         // Basic validation
         if (!name || !email || !message) {
-            alert('Please fill in all required fields.');
+            showFormStatus('Please fill in all required fields.', 'error');
             return;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
+            showFormStatus('Please enter a valid email address.', 'error');
             return;
         }
         
-        // Simulate form submission (replace with actual form handling)
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
+        // Show loading state
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        formStatus.style.display = 'none';
+        
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                showFormStatus('Thank you for your message! We will get back to you soon.', 'success');
+                this.reset();
+            } else {
+                const data = await response.json();
+                if (data.errors) {
+                    showFormStatus('There was an error sending your message. Please try again.', 'error');
+                } else {
+                    showFormStatus('Thank you for your message! We will get back to you soon.', 'success');
+                    this.reset();
+                }
+            }
+        } catch (error) {
+            showFormStatus('There was an error sending your message. Please try again or email us directly at SDYouthGAA1@gmail.com', 'error');
+        } finally {
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        }
     });
+}
+
+function showFormStatus(message, type) {
+    if (!formStatus) return;
+    
+    formStatus.textContent = message;
+    formStatus.style.display = 'block';
+    formStatus.style.padding = '1rem';
+    formStatus.style.borderRadius = '10px';
+    formStatus.style.marginTop = '1rem';
+    
+    if (type === 'success') {
+        formStatus.style.backgroundColor = '#d4edda';
+        formStatus.style.color = '#155724';
+        formStatus.style.border = '1px solid #c3e6cb';
+    } else {
+        formStatus.style.backgroundColor = '#f8d7da';
+        formStatus.style.color = '#721c24';
+        formStatus.style.border = '1px solid #f5c6cb';
+    }
 }
 
 // Add scroll effect to navbar
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.background = '#ffffff';
+        navbar.style.opacity = '1';
         navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = '#ffffff';
+        navbar.style.opacity = '1';
         navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     }
 });
@@ -217,3 +272,7 @@ if ('serviceWorker' in navigator) {
         console.log('Service worker support detected');
     });
 }
+
+
+
+
