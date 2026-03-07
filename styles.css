@@ -441,6 +441,16 @@ section {
     color: #555;
 }
 
+.session-details a {
+    color: #2c5530;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.session-details a:hover {
+    text-decoration: underline;
+}
+
 .session-description {
     margin: 1.5rem 0;
     padding: 1.5rem;
