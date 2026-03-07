@@ -417,7 +417,7 @@ section {
 }
 
 .session-card.featured:before {
-    content: "FEATURED";
+    content: "Next Series";
     position: absolute;
     top: -15px;
     left: 30px;
@@ -493,6 +493,59 @@ section {
 /* Sponsorship Section */
 .sponsorship {
     background: #f8f9fa;
+}
+
+.sponsor-thank-you {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.sponsor-thank-you h3 {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.sponsor-thank-you > p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sponsor-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sponsor-logo-img {
+    max-height: 80px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.sponsor-logo-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2c5530;
+    font-weight: 600;
 }
 
 .sponsorship-content {
@@ -678,6 +731,114 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: #2c5530;
+}
+
+/* Registration Page */
+.registration-page {
+    padding: 140px 0 80px;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.registration-intro {
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.registration-form-wrapper {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.registration-form-wrapper h3 {
+    font-size: 1.35rem;
+    color: #2c5530;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.registration-form-wrapper h3:first-of-type {
+    margin-top: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.radio-label input {
+    width: auto;
+}
+
+.label-hint {
+    font-weight: 400;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.optional {
+    font-weight: 400;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.payment-section {
+    text-align: center;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.payment-section .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.payment-intro {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.btn-payment {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+}
+
+@media (max-width: 768px) {
+    .registration-page {
+        padding: 120px 0 60px;
+    }
+    .registration-form-wrapper {
+        padding: 1.5rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Footer */
