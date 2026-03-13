@@ -1,359 +1,1023 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Diego Youth GAA - Gaelic Football & Hurling for Kids</title>
-    <meta name="description" content="San Diego Youth GAA teaches Gaelic Football and Hurling to children ages 4-16. Join our fun, inclusive sports programs in San Diego!">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">
-                    <img src="images/Youth-GAA-Logo-01.png" alt="San Diego Youth GAA Logo" class="logo-img">
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#sports" class="nav-link">Sports</a>
-                <a href="#sessions" class="nav-link">Sessions</a>
-                <a href="#sponsorship" class="nav-link">Sponsorship</a>
-                <a href="registration.html" class="nav-link">Register</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">San Diego Youth GAA</h1>
-            <p class="hero-subtitle">Teaching Gaelic Football & Hurling to San Diego's Youth</p>
-            <p class="hero-tagline">Ní neart go cur le chéile</p>
-            <p class="hero-tagline-translation">There is no strength without unity</p>
-            <div class="hero-buttons">
-                <a href="#sessions" class="btn btn-primary">Join Our Next Session</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About San Diego Youth GAA</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>We are passionate about introducing the indigenous Irish sports of Gaelic Football and Hurling to the youth of San Diego. Our mission is to provide a fun, inclusive environment where children ages 4–16 years old can learn these traditional sports while building character, teamwork, and cultural appreciation.</p>
-                    <p>Our five-week training sessions are designed to be accessible to all skill levels, from complete beginners to those with some experience. We focus on fundamental skills, teamwork, and most importantly, having fun!</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>4-16</h3>
-                        <p>Age Range</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5</h3>
-                        <p>Week Sessions</p>
-                    </div>
-                    <div class="stat">
-                        <h3>2</h3>
-                        <p>Sports Taught</p>
-                    </div>
-                    <div class="stat">
-                        <h3>100%</h3>
-                        <p>Fun Guaranteed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <!-- Sports Section -->
-    <section id="sports" class="sports">
-        <div class="container">
-            <h2 class="section-title">The Sports We Teach</h2>
-            <div class="sports-grid">
-                <div class="sport-card">
-                    <h3>Gaelic Football</h3>
-                    <p>Gaelic Football is a fast-paced, exciting sport that combines elements of soccer, basketball, and rugby. Players can carry the ball, kick it, and pass it with their hands or feet. It's perfect for developing coordination, teamwork, and strategic thinking.</p>
-                    <ul>
-                        <li>Hand-passing and kicking skills</li>
-                        <li>Team coordination and strategy</li>
-                        <li>Physical fitness and agility</li>
-                        <li>Fair play and sportsmanship</li>
-                    </ul>
-                </div>
-                <div class="sport-card">
-                    <h3>Hurling</h3>
-                    <p>Hurling is one of the fastest field sports in the world! Players use a hurley (stick) to strike a sliotar (ball) and score goals. It's an incredible sport for developing hand-eye coordination, speed, and precision.</p>
-                    <ul>
-                        <li>Hurley and sliotar handling</li>
-                        <li>Striking and catching techniques</li>
-                        <li>Speed and agility training</li>
-                        <li>Team tactics and positioning</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    opacity: 1;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    height: 120px;
+}
 
-    <!-- Training Methodology -->
-    <section class="methodology">
-        <div class="container">
-            <h2 class="section-title">Our Training Approach</h2>
-            <div class="methodology-content">
-                <div class="methodology-text">
-                    <h3>Age-Appropriate Development</h3>
-                    <p>We structure our training sessions to match the developmental stages of our young athletes:</p>
-                    <ul>
-                        <li><strong>Ages 4-6:</strong> Basic movement skills, fun games, and introduction to equipment</li>
-                        <li><strong>Ages 7-10:</strong> Fundamental skills, simple rules, and team cooperation</li>
-                        <li><strong>Ages 11-14:</strong> Advanced techniques, strategy, and competitive play</li>
-                    </ul>
-                </div>
-                <div class="methodology-principles">
-                    <h3>Our Core Principles</h3>
-                    <div class="principles-grid">
-                        <div class="principle">
-                            <h4>Fun First</h4>
-                            <p>We believe learning happens best when kids are having fun and enjoying themselves.</p>
-                        </div>
-                        <div class="principle">
-                            <h4>Inclusive Environment</h4>
-                            <p>All skill levels and backgrounds are welcome. We focus on personal improvement and team spirit.</p>
-                        </div>
-                        <div class="principle">
-                            <h4>Cultural Appreciation</h4>
-                            <p>We teach not just the sports, but the rich Irish culture and history behind them.</p>
-                        </div>
-                        <div class="principle">
-                            <h4>Character Building</h4>
-                            <p>Sportsmanship, respect, and teamwork are just as important as athletic skills.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
 
-    <!-- Sessions Section -->
-    <section id="sessions" class="sessions">
-        <div class="container">
-            <h2 class="section-title">Upcoming Sessions</h2>
-            <div class="sessions-content">
-                <div class="session-card featured">
-                    <h3>Spring 2026 Series</h3>
-                    <div class="session-details">
-                        <p><strong>When:</strong> Four Sunday practices April 19 – May 10, 2026 (Skip May 4)</p>
-                        <p><strong>Time:</strong> 9:00 AM – 10:30 AM</p>
-                        <p><strong>Where:</strong> <a href="https://maps.app.goo.gl/bVkamLUsUkQuXabm9" target="_blank" rel="noopener noreferrer">Clairemont Canyons Academy Elementary School</a><br>4133 Mt Albertine Ave, San Diego, CA 92111</p>
-                        <p><strong>Plus:</strong> One West Coast 7s tournament exhibition game on Saturday, May 23rd at Southwestern College in Chula Vista. Time TBD.</p>
-                        <p><strong>Ages:</strong> 4–14. Girls and boys ages 4–16 (grouped by age). Any experience level welcome. No experience or equipment required.</p>
-                        <p><strong>Annual Cost</strong> (includes four seasonal series per year):<br>
-                        1st Child: $100 | 2nd Child: $75 | 3rd or any additional: $50</p>
-                        <p><em>No child turned away for lack of funds. We have a sliding scale policy—pay what you can. Dues include a club jersey to keep and a loan of all equipment needed.</em></p>
-                    </div>
-                    <div class="session-description">
-                        <p>Join us for our spring training series! This program will introduce your child to both Gaelic Football and Hurling in a fun, supportive environment. All equipment is provided, and no prior experience is necessary.</p>
-                    </div>
-                    <a href="registration.html" class="btn btn-primary">Register Now</a>
-                </div>
-                
-                <div class="session-info">
-                    <h3>What to Expect</h3>
-                    <ul>
-                        <li>Warm-up games and stretching</li>
-                        <li>Skill development activities</li>
-                        <li>Small-sided games and scrimmages</li>
-                        <li>Cool-down and team building</li>
-                        <li>Lots of water breaks and socializing</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
 
-    <!-- Sponsorship Section -->
-    <section id="sponsorship" class="sponsorship">
-        <div class="container">
-            <h2 class="section-title">Support Our Mission</h2>
-            <div class="sponsor-thank-you">
-                <h3>Thank You to Our Sponsors</h3>
-                <p>We are grateful for the support of our community sponsors who help make San Diego Youth GAA possible. Their generosity allows us to provide equipment, coaching, and opportunities for young athletes to learn Gaelic games.</p>
-                <div class="sponsor-logos">
-                    <div class="sponsor-logo-item">
-                        <img src="images/old-country-millwork.png" alt="Old Country Millwork" class="sponsor-logo-img">
-                        <p>Old Country Millwork</p>
-                    </div>
-                    <div class="sponsor-logo-item">
-                        <img src="images/ward-burke-tunneling.png" alt="Ward & Burke Tunneling" class="sponsor-logo-img">
-                        <p>Ward & Burke Tunneling</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sponsorship-content">
-                <div class="sponsorship-text">
-                    <h3>Become a Sponsor</h3>
-                    <p>Help us grow Gaelic sports in San Diego! Your sponsorship helps us provide equipment, maintain facilities, and keep our programs accessible to all families.</p>
-                    <p><strong>SDYGAA is a 501(c)(3) organization.</strong> All donations are tax-deductible.</p>
-                </div>
-                <div class="sponsorship-levels">
-                    <h3>Sponsorship Tiers</h3>
-                    <div class="levels-grid">
-                        <div class="level">
-                            <h4>Green Tier</h4>
-                            <p class="amount">$150</p>
-                            <ul>
-                                <li>Sponsor a child's club dues and equipment for a year of training</li>
-                            </ul>
-                        </div>
-                        <div class="level">
-                            <h4>Bronze Tier</h4>
-                            <p class="amount">$500</p>
-                            <ul>
-                                <li>Certificate to display at business in recognition of support</li>
-                                <li>Social Media Shout Outs</li>
-                                <li>Recognition on SDYGAA Website and signage on pop-up tent at practice</li>
-                            </ul>
-                        </div>
-                        <div class="level">
-                            <h4>Silver Tier</h4>
-                            <p class="amount">$2,000</p>
-                            <ul>
-                                <li>Includes all Bronze Benefits</li>
-                                <li>Featured social media post at the start of Fall, Winter, and Spring practice</li>
-                                <li>Small/medium logo placement on jersey and one adult-sized jersey</li>
-                                <li>Feature on Clubs' Social Media and Website</li>
-                            </ul>
-                        </div>
-                        <div class="level">
-                            <h4>Gold Tier</h4>
-                            <p class="amount">$3,000</p>
-                            <ul>
-                                <li>Includes all Silver benefits</li>
-                                <li>A large logo on jerseys (Front)</li>
-                                <li>Players and Coaches will wear these shirts to practice, school, etc.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-logo">
-                        <img src="images/Youth-GAA-Logo-01.png" alt="San Diego Youth GAA Logo" class="contact-logo-img">
-                    </div>
-                    <div class="contact-item">
-                        <h4>Contact</h4>
-                        <p>Caroline Conlon, Chairperson</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <p>SDYouthGAA1@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Phone</h4>
-                        <p>(858) 349-4170</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Location</h4>
-                        <p>San Diego, CA</p>
-                        <p>Training sessions at local parks</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Follow Us</h4>
-                        <p>@SDYouthGAA on social media</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form action="https://formspree.io/f/xldoqvle" method="POST" id="contact-form">
-                        <input type="hidden" name="_replyto" value="SDYouthGAA1@gmail.com">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission from SD Youth GAA Website">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="child-age">Child's Age</label>
-                            <select id="child-age" name="child-age">
-                                <option value="">Select Age</option>
-                                <option value="4-6">4-6 years</option>
-                                <option value="7-10">7-10 years</option>
-                                <option value="11-14">11-14 years</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <div id="form-status" style="margin-top: 1rem; display: none;"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo-img {
+    height: 100px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>San Diego Youth GAA</h3>
-                    <p>Teaching Gaelic Football & Hurling to San Diego's Youth</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#sports">Sports</a></li>
-                        <li><a href="index.html#sessions">Sessions</a></li>
-                        <li><a href="registration.html">Register</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>SDYouthGAA1@gmail.com</p>
-                    <p>(858) 349-4170</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 San Diego Youth GAA. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2c5530;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+                url('images/Youth-GAA-Header-Image-02.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: white;
+    padding: 140px 0 80px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-tagline-translation {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #a61323;
+    color: white;
+    border-color: #a61323;
+}
+
+.btn-primary:hover {
+    background: #8a0f1c;
+    border-color: #8a0f1c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(166, 19, 35, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #2c5530;
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #2c5530;
+}
+
+/* About Section */
+.about {
+    background: #f8f9fa;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Sports Section */
+.sports {
+    position: relative;
+    background: url('images/Youth-GAA-Header-Image-04.png') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.sports .section-title {
+    color: #ffffff;
+}
+
+.sports .container {
+    position: relative;
+    z-index: 1;
+}
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.sport-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #2c5530;
+    position: relative;
+    overflow: hidden;
+}
+
+.sport-card:first-child {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%),
+                url('images/Youth-GAA-Header-Image-01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sport-card:last-child {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%),
+                url('images/Youth-GAA-Header-Image-03.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sport-card h3 {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.sport-card p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.sport-card ul {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.sport-card li {
+    padding: 0.5rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+    z-index: 1;
+}
+
+.sport-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+/* Methodology Section */
+.methodology {
+    background: #f8f9fa;
+}
+
+.methodology-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.methodology-text h3,
+.methodology-principles h3 {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.methodology-text ul {
+    list-style: none;
+}
+
+.methodology-text li {
+    padding: 0.8rem 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.principle {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.principle h4 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.principle p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Sessions Section */
+.sessions {
+    position: relative;
+    background: url('images/Youth-GAA-Header-Image-05.png') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.sessions .container {
+    position: relative;
+    z-index: 1;
+}
+
+.sessions-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.session-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #2c5530;
+}
+
+.session-card.featured {
+    border-color: #a61323;
+    position: relative;
+}
+
+.session-card.featured:before {
+    content: "Next Series";
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    background: #a61323;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.session-card h3 {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.session-details p {
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.session-details a {
+    color: #2c5530;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.session-details a:hover {
+    text-decoration: underline;
+}
+
+.session-description {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #2c5530;
+}
+
+.session-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.session-info h3 {
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.session-info ul {
+    list-style: none;
+}
+
+.session-info li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.session-info li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+/* Sponsorship Section */
+.sponsorship {
+    background: #f8f9fa;
+}
+
+.sponsor-thank-you {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.sponsor-thank-you h3 {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.sponsor-thank-you > p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    min-height: 100px;
+}
+
+.sponsor-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.sponsor-logo-img {
+    display: block;
+    height: 80px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.sponsor-logo-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2c5530;
+    font-weight: 600;
+}
+
+.sponsorship-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.sponsorship-levels {
+    width: 100%;
+}
+
+.sponsorship-text h3 {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.sponsorship-text p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.sponsorship-benefits h4 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.sponsorship-benefits ul {
+    list-style: none;
+}
+
+.sponsorship-benefits li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.sponsorship-benefits li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.level {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid #2c5530;
+    min-height: 100%;
+}
+
+.level h4 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a61323;
+    margin-bottom: 1rem;
+}
+
+.level ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.level li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.level li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-logo {
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-logo-img {
+    max-width: 200px;
+    height: auto;
+    width: 100%;
+}
+
+.contact-item {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.contact-item h4 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-item p {
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.contact-form h3 {
+    color: #2c5530;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c5530;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2c5530;
+}
+
+/* Registration Page */
+.registration-page {
+    padding: 140px 0 80px;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.registration-intro {
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.registration-form-wrapper {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.registration-form-wrapper h3 {
+    font-size: 1.35rem;
+    color: #2c5530;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.registration-form-wrapper h3:first-of-type {
+    margin-top: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.radio-label input {
+    width: auto;
+}
+
+.label-hint {
+    font-weight: 400;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.optional {
+    font-weight: 400;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.payment-section {
+    text-align: center;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.payment-section .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.payment-intro {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.btn-payment {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+}
+
+@media (max-width: 768px) {
+    .registration-page {
+        padding: 120px 0 60px;
+    }
+    .registration-form-wrapper {
+        padding: 1.5rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #2c5530;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #4a7c59;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+        height: 90px;
+    }
+
+    .logo-img {
+        height: 70px;
+        max-width: 200px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero {
+        background-attachment: scroll;
+        padding: 110px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content,
+    .methodology-content,
+    .sessions-content,
+    .sponsorship-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-logo-img {
+        max-width: 150px;
+    }
+
+    .sports {
+        background-attachment: scroll;
+    }
+
+    .sessions {
+        background-attachment: scroll;
+    }
+
+    .sports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .levels-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card,
+    .session-card,
+    .contact-form {
+        padding: 2rem;
+    }
+}
 
 
 
